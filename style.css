@@ -1,0 +1,115 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #3498db, #e74c3c);
+    margin: 0;
+    color: #000;
+}
+
+#welcomeScreen,
+#gameScreen,
+#congratulationsScreen {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#startButton,
+#resetButton {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#startButton {
+    background-color: #3498db;
+    color: #fff;
+}
+
+#startButton:hover {
+    background-color: #2980b9;
+}
+
+#resetButton {
+    background-color: #e74c3c;
+    color: #fff;
+    margin-top: 20px;
+}
+
+#resetButton:hover {
+    background-color: #c0392b;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.cell:hover {
+    background-color: #dfe6e9;
+}
+
+.playerX {
+    color: #3498db;
+}
+
+.playerO {
+    color: #e74c3c;
+}
+
+.winner {
+    background-color: #2ecc71;
+    color: #fff;
+    animation: scaleUp 1s ease-in-out;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.draw {
+    background-color: #e67e22;
+    color: #fff;
+}
+
+#congratulations {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+#currentPlayer {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
